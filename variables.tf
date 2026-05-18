@@ -27,3 +27,8 @@ variable "GKE_POOL_NAME" {
   type        = string
   description = "GKE pool name"
 }
+
+variable "GKE_DELETION_PROTECTION" {
+  type    = bool
+  default = false
+}
