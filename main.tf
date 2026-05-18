@@ -7,3 +7,10 @@ module "gke_cluster" {
   GKE_CLUSTER_NAME = var.GKE_CLUSTER_NAME
   GKE_POOL_NAME    = var.GKE_POOL_NAME
 }
+
+terraform {
+  backend "gcs" {
+    bucket = "tf-state-project-b84fbdfe-5665-4285-ad8"
+    prefix = "terraform/state"
+      }
+}
